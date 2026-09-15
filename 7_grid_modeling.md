@@ -459,7 +459,7 @@ $$
 
 ## The Linear Optimal Power Flow (LOPF) Problem
 
-The power flow equations {ref}`eq_pf` contain quadratic terms multiplied with trigonometric functions. Branch flow constraint {eq}`pf_criterion_2` is even more complicated. The power flow equations being nonlinear is easy enough when solving them as a system of equations, and the branch flow constraint being nonlinear is easy enough when evaluating the power flow solution. However, when used as constraints in OPF, the nonlinearity makes the optimization problem significantly more difficult. To simplify (linearize) the power flow equations and branch flow constraint, thereby making the optimization problem easier, the following assumptions are applied:
+The power flow equations {ref}`eq_pf` contain quadratic terms multiplied with trigonometric functions. Branch flow constraint {eq}`pf_criterion_2` is even more complicated. The power flow equations being nonlinear is easy enough when solving them as a system of equations, and the branch flow constraint being nonlinear is easy enough when evaluating the power flow solution. However, when used as constraints in OPF, the nonlinearity makes the optimization problem significantly more difficult. To simplify (linearize) the power flow equations and branch flow constraint, thereby making the optimization problem easier, the following approximations are applied:
 
 1. Series resistance is negligible compared to series reactance: $g_{ik} \approx 0$ and $y_{ik} \approx j b_{ik}$. This approximation is reasonable for transmission lines and, combined with approximation 2, assumes a lossless network.
 2. Shunt conductance and susceptance are negligible: $g_{ik}^\text{Sh} \approx b_{ik}^\text{Sh} \approx 0$.
