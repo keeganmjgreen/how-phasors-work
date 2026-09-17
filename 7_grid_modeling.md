@@ -459,7 +459,7 @@ $$
 
 ## The Linear Optimal Power Flow (LOPF) Problem
 
-The power flow equations {ref}`eq_pf` contain quadratic terms multiplied with trigonometric functions. Branch flow constraint {eq}`pf_criterion_2` is even more complicated. The power flow equations being nonlinear is easy enough when solving them as a system of equations, and the branch flow constraint being nonlinear is easy enough when evaluating the power flow solution. However, when used as constraints in OPF, the nonlinearity makes the optimization problem significantly more difficult. To simplify (linearize) the power flow equations and branch flow constraint, thereby making the optimization problem easier, the following approximations are applied:
+The power flow equations {ref}`eq_pf` contain quadratic terms multiplied with trigonometric functions, and branch flow constraint {eq}`pf_criterion_2` is even more complicated. The power flow equations being nonlinear is easy enough when solving them as a system of equations, and the branch flow constraint being nonlinear is easy enough when evaluating the power flow solution, but when used as constraints in OPF, the nonlinearity makes the optimization problem significantly more difficult. To simplify (linearize) the power flow equations and branch flow constraint, thereby making the optimization problem easier, the following approximations are applied:
 
 1. Series resistance is negligible compared to series reactance: $g_{ik} \approx 0$ and $y_{ik} \approx j b_{ik}$. This approximation is reasonable for transmission lines and, combined with approximation 2, assumes a lossless network.
 2. Shunt conductance and susceptance are negligible: $g_{ik}^\text{Sh} \approx b_{ik}^\text{Sh} \approx 0$.
@@ -545,7 +545,7 @@ $$
     P_{ik} & = B_{ik} \!\: (\delta_i - \delta_k - \Phi_{ik}) \\
     Q_{ik} & = 0
 \end{aligned}
-$$
+$$ (eq_p_q_linear)
 
 Now, when we once again sum the power flowing out of every bus $i$, it includes only active power:
 
@@ -581,8 +581,26 @@ Linear power flow is analogous to DC circuit analysis.
 ```
 
 <!-- Undoing any assumption -> nonlinearity? -->
-<!-- KCL/KVL -->
-<!-- Control -->
+
+### Cycle-Based Formulation
+
+The LOPF problem uses bus voltage angles as decision variables, but there are advantages to using the branch power flows instead. For such an alternate formulation, we are still constraining the net power injected at each bus $i$ to equal the total power flowing into the bus from each connected branch, but we do so in terms of the branch power flow $P_l$. We refer to the *signed incidence matrix* ($C^{\, \text{t}} - C^{\, \text{f}}$) to indicate whether $P_l$ is flowing into or out of bus $i$ ($+1$ or $-1$, or $0$ if $l$ is not connected to it):
+
+$$
+P_i = \!\!\! \sum_{k \in \mathcal{N} \! , \, k \neq i} \!\!\!\! P_{ik} = \sum_{l \in \mathcal{L}} \, (C^{\, \text{t}}_{l, i} - C^{\, \text{f}}_{l, i}) \, P_l
+$$
+
+This increases the number of variables while the number of equations in the system stays the same. To make the system solvable, we apply Kirchhoff's Voltage Law (KVL), which states that the net voltage difference around each loop or cycle in the circuit/grid is zero. This means that if we add up the voltage difference $V_i - V_k$ across every branch $ik$ in a given cycle, they must add up to zero. Because we assume $V = 1 \ \mathrm{pu}$, this becomes $1 \angle \delta_i - 1 \angle \delta_k$. Ensuring these sum to zero around a given cycle is equivalent to just ensuring that the cycle's voltage *angle* differences (${\Delta \delta}_l = \delta_i - \delta_k$) sum to zero, or:
+
+$$
+\sum_{l \in \mathcal{L}} C_{l, c} \, {\Delta \delta}_l = 0  \quad \forall \ c \in \mathcal{C}
+$$
+
+where $\mathcal{C}$ is the set of cycles, and $C_{l, c}$ indicates whether branch $l$ is in cycle $c$ ($+1$ or $-1$ depending on the direction, or $0$ if absent). Using Equation {ref}`eq_p_q_linear`, we can express this in terms of the decision variables $P_l$ as follows, thereby completing the system of equations.
+
+$$
+\sum_{l \in \mathcal{L}} C_{l, c} \left( \frac{P_l}{b_l} + \varphi_l \right) = 0 \quad \forall \ c \in \mathcal{C}
+$$
 
 ## Summary
 
