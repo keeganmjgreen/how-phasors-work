@@ -1,7 +1,7 @@
 version: 1
 project:
   title: How Phasors Work
-  github: keeganmjgreen/how_phasors_work
+  github: keeganmjgreen/how-phasors-work
   toc:
     - file: 0_prelude.md
     - file: 1_introduction.ipynb

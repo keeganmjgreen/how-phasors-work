@@ -374,7 +374,7 @@ How the cost function $C_g$ is formulated depends on the application. If the app
 
 So far, we have assumed that all generators are dispatchable (controllable power) and that all loads are non-dispatchable (uncontrollable power). There do exist non-dispatchable generators whose power production *cannot* be controlled, as well as dispatchable loads (such as smart thermostats and smart EV charging in some cases) whose power consumption *can* be controlled by the grid operator. [@biddleUnderstandingDifferencesNonDispatchable2024] However, this does not mean that the grid model discussed so far cannot represent these resources. Non-dis&shy;patchable generators can be modeled as loads whose fixed power is positive rather than negative. As for dispatchable loads, they can be modeled as generators whose maximum power is negative rather than positive, and with cost functions that intake and output negative values. This negative cost&mdash;associated with consuming, rather than producing&mdash;is called *utility* in economics. Utility quantifies the economic value delivered to consumers (loads) when they are dispatched by the grid operator, in contrast to the cost incurred by producers (generators) by being dispatched.[^3]
 
-[^3]: To learn more about the economics of operating the electrical grid, see [How Electricity Markets Work](https://keeganmjgreen.github.io/ontario_electricity_market/).
+[^3]: To learn more about the economics of operating the electrical grid, see [How Electricity Markets Work](https://keegangreen.ca/how-electricity-markets-work/).
 
 ## The Optimal Power Flow (OPF) Problem
 

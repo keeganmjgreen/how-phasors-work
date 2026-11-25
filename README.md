@@ -2,25 +2,25 @@
 
 An electrical engineering book about phasors and applying AC circuit analysis to the electrical grid.
 
-[Web](https://keeganmjgreen.github.io/how_phasors_work) | [PDF](https://raw.githubusercontent.com/keeganmjgreen/how_phasors_work/refs/heads/main/how_phasors_work.pdf)
+[Web](https://keegangreen.ca/how-phasors-work) | [PDF](https://raw.githubusercontent.com/keeganmjgreen/how-phasors-work/refs/heads/main/how_phasors_work.pdf)
 
 ![](img/pdf_fanout.png)
 
 ## Chapters
 
-- [Introduction](https://keeganmjgreen.github.io/how_phasors_work/introduction/)<br>Basics of DC versus AC power and resistive versus reactive loads.
+- [Introduction](https://keegangreen.ca/how-phasors-work/introduction/)<br>Basics of DC versus AC power and resistive versus reactive loads.
 
-- [What is a Phasor?](https://keeganmjgreen.github.io/how_phasors_work/what-is-a-phasor/)<br>Relationship between sinusoids and phasors. Deriving the concept of phasors. Formal phasor transformation and notation.
+- [What is a Phasor?](https://keegangreen.ca/how-phasors-work/what-is-a-phasor/)<br>Relationship between sinusoids and phasors. Deriving the concept of phasors. Formal phasor transformation and notation.
 
-- [Life With and Without Phasors: Example Circuit Analysis](https://keeganmjgreen.github.io/how_phasors_work/life-with-and-without-phasors/)<br>Seeing the benefits of phasors in practice over differential equations and the Laplace transform.
+- [Life With and Without Phasors: Example Circuit Analysis](https://keegangreen.ca/how-phasors-work/life-with-and-without-phasors/)<br>Seeing the benefits of phasors in practice over differential equations and the Laplace transform.
 
-- [Complex Power and the Power Factor](https://keeganmjgreen.github.io/how_phasors_work/complex-power-and-the-power-factor/)<br>Deriving complex power and the power triangle from time-domain instantaneous power. Power factor and power factor correction.
+- [Complex Power and the Power Factor](https://keegangreen.ca/how-phasors-work/complex-power-and-the-power-factor/)<br>Deriving complex power and the power triangle from time-domain instantaneous power. Power factor and power factor correction.
 
-- [Three-Phase Power](https://keeganmjgreen.github.io/how_phasors_work/three-phase-power/)<br>Motivation for three-phase power. Wye versus delta configurations. Three-phase power in the grid.
+- [Three-Phase Power](https://keegangreen.ca/how-phasors-work/three-phase-power/)<br>Motivation for three-phase power. Wye versus delta configurations. Three-phase power in the grid.
 
-- [Grid Modeling](https://keeganmjgreen.github.io/how_phasors_work/grid-modeling/)<br>Bus injection model. Power flow, optimal power flow, economic dispatch, and unit commitment problems.
+- [Grid Modeling](https://keegangreen.ca/how-phasors-work/grid-modeling/)<br>Bus injection model. Power flow, optimal power flow, economic dispatch, and unit commitment problems.
 
-This book is a work in progress. Existing chapters will be revised, and new chapters will be added. Readers are encouraged to provide feedback in [Issues](https://github.com/keeganmjgreen/how_phasors_work/issues).
+This book is a work in progress. Existing chapters will be revised, and new chapters will be added. Readers are encouraged to provide feedback in [Issues](https://github.com/keeganmjgreen/how-phasors-work/issues).
 
 ---
 

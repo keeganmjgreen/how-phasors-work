@@ -4,7 +4,7 @@ subtitle: An electrical engineering book about phasors and applying AC circuit a
 author: Keegan Trujillo-Green, BASc Mechatronic Systems Engineering
 ---
 
-{button}`Download the PDF <https://raw.githubusercontent.com/keeganmjgreen/how_phasors_work/refs/heads/main/how_phasors_work.pdf>`
+{button}`Download the PDF <https://raw.githubusercontent.com/keeganmjgreen/how-phasors-work/refs/heads/main/how_phasors_work.pdf>`
 
 ![](img/pdf_fanout.png)
 
@@ -54,7 +54,7 @@ Bus injection model. Power flow, optimal power flow, economic dispatch, and unit
 
 ::::
 
-This book is a work in progress. Existing chapters will be revised, and new chapters will be added. Readers are encouraged to provide feedback [here](https://github.com/keeganmjgreen/how_phasors_work/issues).
+This book is a work in progress. Existing chapters will be revised, and new chapters will be added. Readers are encouraged to provide feedback [here](https://github.com/keeganmjgreen/how-phasors-work/issues).
 
 ---
 
