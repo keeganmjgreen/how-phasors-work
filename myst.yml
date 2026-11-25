@@ -3,7 +3,7 @@ project:
   title: How Phasors Work
   github: keeganmjgreen/how-phasors-work
   toc:
-    - file: 0_prelude.md
+    - file: index.md
     - file: 1_introduction.ipynb
     - file: 2_what_is_a_phasor.ipynb
     - file: 3_life_with_and_without_phasors.ipynb
