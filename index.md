@@ -12,43 +12,43 @@ author: Keegan Trujillo-Green, BASc Mechatronic Systems Engineering
 
 :::{card}
 :header: Introduction<br>&nbsp;
-:link: /introduction
+:link: 1_introduction.ipynb
 Basics of DC versus AC power and resistive versus reactive loads.
 :::
 
 :::{card}
 :header: What is a Phasor?<br>&nbsp;
-:link: /what-is-a-phasor
+:link: 2_what_is_a_phasor.ipynb
 Relationship between sinusoids and phasors. Deriving the concept of phasors. Formal phasor transformation and notation.
 :::
 
 :::{card}
 :header: Life With and Without Phasors: Example Circuit Analysis
-:link: /life-with-and-without-phasors
+:link: 3_life_with_and_without_phasors.ipynb
 Seeing the benefits of phasors in practice over differential equations and the Laplace transform.
 :::
 
 :::{card}
 :header: Tutorial: Building an AC Circuit Analyzer
-:link: /building-an-ac-circuit-analyzer
+:link: 4_building_an_ac_circuit_analyzer.ipynb
 Developing AC circuit analysis skills by building a software tool to solve any AC circuit.
 :::
 
 :::{card}
 :header: Complex Power and the Power Factor
-:link: /complex-power-and-the-power-factor
+:link: 5_complex_power_and_the_power_factor.ipynb
 Deriving complex power and the power triangle from time-domain instantaneous power. Power factor and power factor correction.
 :::
 
 :::{card}
 :header: Three-Phase Power<br>&nbsp;
-:link: /three-phase-power
+:link: 6_three_phase_power.ipynb
 Motivation for three-phase power. Wye versus delta configurations. Three-phase power in the grid.
 :::
 
 :::{card}
 :header: Grid Modeling<br>&nbsp;
-:link: /grid-modeling
+:link: 7_grid_modeling.md
 Bus injection model. Power flow, optimal power flow, economic dispatch, and unit commitment problems.
 :::
 
