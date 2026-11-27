@@ -1,0 +1,24 @@
+# Tells the blog (keeganmjgreen.github.io), which includes this book, to rebuild.
+# Requires a BLOG_DISPATCH_TOKEN secret: a fine-grained personal access token with
+# Contents: Read and write on keeganmjgreen/keeganmjgreen.github.io.
+
+name: Notify blog
+on:
+  push:
+    branches: [main]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send book-updated event to the blog
+        env:
+          GH_TOKEN: ${{ secrets.BLOG_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::BLOG_DISPATCH_TOKEN secret is not set; the blog was not notified."
+            exit 0
+          fi
+          gh api repos/keeganmjgreen/keeganmjgreen.github.io/dispatches \
+            -f event_type=book-updated \
+            -f "client_payload[repository]=$GITHUB_REPOSITORY" \
+            -f "client_payload[sha]=$GITHUB_SHA"
